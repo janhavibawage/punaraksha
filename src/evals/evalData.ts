@@ -1,0 +1,208 @@
+import type { GrievanceCategory, Severity } from "../agents/types";
+
+export interface LabeledComplaint {
+  text: string;
+  wardId: string;
+  trueCategory: GrievanceCategory;
+  trueSeverity: Severity;
+  correctDepartment: string;
+}
+
+export const labeledComplaints: LabeledComplaint[] = [
+  {
+    text: "Garbage has not been collected near the school for two weeks and children are playing next to overflowing bins.",
+    wardId: "W03",
+    trueCategory: "garbage",
+    trueSeverity: "high",
+    correctDepartment: "Solid Waste Management Department, Ward W03",
+  },
+  {
+    text: "Black smoke from a small factory is making it difficult for elderly residents to breathe in the evening.",
+    wardId: "W05",
+    trueCategory: "air_quality",
+    trueSeverity: "high",
+    correctDepartment: "PMC Environment Cell, Ward W05",
+  },
+  {
+    text: "A large pothole near the BRT stop is causing two-wheeler skids every morning.",
+    wardId: "W01",
+    trueCategory: "road_damage",
+    trueSeverity: "high",
+    correctDepartment: "Road Maintenance Department, Ward W01",
+  },
+  {
+    text: "Water supply has stopped for three days in our lane and the tanker did not arrive.",
+    wardId: "W02",
+    trueCategory: "water_supply",
+    trueSeverity: "medium",
+    correctDepartment: "Water Supply and Drainage Department, Ward W02",
+  },
+  {
+    text: "A tree branch is hanging over live wires after last night's rain and may fall on the footpath.",
+    wardId: "W07",
+    trueCategory: "tree_safety",
+    trueSeverity: "critical",
+    correctDepartment: "Garden and Tree Authority, Ward W07",
+  },
+  {
+    text: "Construction dust is covering the road and there is no water sprinkling near the metro work.",
+    wardId: "W04",
+    trueCategory: "air_quality",
+    trueSeverity: "high",
+    correctDepartment: "PMC Environment Cell, Ward W04",
+  },
+  {
+    text: "Loudspeakers continue past midnight near the chowk and patients in the clinic cannot sleep.",
+    wardId: "W08",
+    trueCategory: "noise",
+    trueSeverity: "high",
+    correctDepartment: "Ward Nuisance Control Cell, Ward W08",
+  },
+  {
+    text: "Street vendors have blocked the entire footpath and school children have to walk on the road.",
+    wardId: "W06",
+    trueCategory: "encroachment",
+    trueSeverity: "high",
+    correctDepartment: "Anti-Encroachment Ward Squad, Ward W06",
+  },
+  {
+    text: "Sewage water is leaking into the drinking water line and residents smell contamination.",
+    wardId: "W03",
+    trueCategory: "water_supply",
+    trueSeverity: "critical",
+    correctDepartment: "Water Supply and Drainage Department, Ward W03",
+  },
+  {
+    text: "Illegal parking and shop displays are blocking an ambulance route near the market.",
+    wardId: "W08",
+    trueCategory: "encroachment",
+    trueSeverity: "critical",
+    correctDepartment: "Anti-Encroachment Ward Squad, Ward W08",
+  },
+  {
+    text: "Burning waste behind the apartment is creating smoke every night.",
+    wardId: "W04",
+    trueCategory: "air_quality",
+    trueSeverity: "high",
+    correctDepartment: "PMC Environment Cell, Ward W04",
+  },
+  {
+    text: "The storm drain is clogged and water is rising near the bus depot after rain.",
+    wardId: "W05",
+    trueCategory: "water_supply",
+    trueSeverity: "medium",
+    correctDepartment: "Water Supply and Drainage Department, Ward W05",
+  },
+  {
+    text: "A cracked tree trunk near the playground looks dangerous after strong wind.",
+    wardId: "W02",
+    trueCategory: "tree_safety",
+    trueSeverity: "critical",
+    correctDepartment: "Garden and Tree Authority, Ward W02",
+  },
+  {
+    text: "Repeated honking from private buses is disturbing the hospital zone.",
+    wardId: "W01",
+    trueCategory: "noise",
+    trueSeverity: "high",
+    correctDepartment: "Ward Nuisance Control Cell, Ward W01",
+  },
+  {
+    text: "The road surface has broken near the flyover ramp and traffic is swerving suddenly.",
+    wardId: "W04",
+    trueCategory: "road_damage",
+    trueSeverity: "medium",
+    correctDepartment: "Road Maintenance Department, Ward W04",
+  },
+  {
+    text: "Dry leaves and mixed waste are piling up near the public garden gate.",
+    wardId: "W07",
+    trueCategory: "garbage",
+    trueSeverity: "low",
+    correctDepartment: "Solid Waste Management Department, Ward W07",
+  },
+  {
+    text: "Dust from uncovered construction material is triggering cough and eye irritation.",
+    wardId: "W03",
+    trueCategory: "air_quality",
+    trueSeverity: "medium",
+    correctDepartment: "PMC Environment Cell, Ward W03",
+  },
+  {
+    text: "A footpath has been occupied by a temporary shed outside the bus stand.",
+    wardId: "W05",
+    trueCategory: "encroachment",
+    trueSeverity: "medium",
+    correctDepartment: "Anti-Encroachment Ward Squad, Ward W05",
+  },
+  {
+    text: "Low water pressure has continued for a week in the apartment block.",
+    wardId: "W06",
+    trueCategory: "water_supply",
+    trueSeverity: "high",
+    correctDepartment: "Water Supply and Drainage Department, Ward W06",
+  },
+  {
+    text: "Open manhole cover is a danger for pedestrians near the traffic signal.",
+    wardId: "W08",
+    trueCategory: "road_damage",
+    trueSeverity: "critical",
+    correctDepartment: "Road Maintenance Department, Ward W08",
+  },
+  {
+    text: "The garbage bin outside the clinic is full and smells strongly.",
+    wardId: "W01",
+    trueCategory: "garbage",
+    trueSeverity: "medium",
+    correctDepartment: "Solid Waste Management Department, Ward W01",
+  },
+  {
+    text: "Factories are releasing fumes during night hours near the river bridge.",
+    wardId: "W05",
+    trueCategory: "air_quality",
+    trueSeverity: "high",
+    correctDepartment: "PMC Environment Cell, Ward W05",
+  },
+  {
+    text: "A water pipe burst has flooded the lane and entered ground-floor homes.",
+    wardId: "W02",
+    trueCategory: "water_supply",
+    trueSeverity: "medium",
+    correctDepartment: "Water Supply and Drainage Department, Ward W02",
+  },
+  {
+    text: "A roadside tree is leaning over parked vehicles and needs inspection.",
+    wardId: "W07",
+    trueCategory: "tree_safety",
+    trueSeverity: "medium",
+    correctDepartment: "Garden and Tree Authority, Ward W07",
+  },
+  {
+    text: "The public toilet has no lights and feels unsafe after evening.",
+    wardId: "W08",
+    trueCategory: "other",
+    trueSeverity: "medium",
+    correctDepartment: "Ward Office Civic Desk, Ward W08",
+  },
+  {
+    text: "Construction noise starts before 6 AM every day near the residential block.",
+    wardId: "W04",
+    trueCategory: "noise",
+    trueSeverity: "medium",
+    correctDepartment: "Ward Nuisance Control Cell, Ward W04",
+  },
+  {
+    text: "The footpath ramp near the bus stop is broken and wheelchair users cannot pass.",
+    wardId: "W06",
+    trueCategory: "road_damage",
+    trueSeverity: "medium",
+    correctDepartment: "Road Maintenance Department, Ward W06",
+  },
+  {
+    text: "Hawkers have occupied the emergency exit side of the community hall.",
+    wardId: "W03",
+    trueCategory: "encroachment",
+    trueSeverity: "high",
+    correctDepartment: "Anti-Encroachment Ward Squad, Ward W03",
+  },
+];

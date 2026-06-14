@@ -1,0 +1,11 @@
+node_modules/
+.npm-cache/
+.git/
+.codex-git/
+dist/
+*.log
+.env
+server/data/*.sqlite
+server/uploads/evidence/*
+!server/data/.gitkeep
+!server/uploads/evidence/.gitkeep

@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: punaraksha
+    env: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8787
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: ADMIN_INVITE_CODE
+        generateValue: true
+      - key: DATA_DIR
+        value: /data
+      - key: DATABASE_PATH
+        value: /data/punaraksha.sqlite
+      - key: UPLOAD_DIR
+        value: /data/uploads/evidence
+      - key: VITE_API_URL
+        value: ""
+    disk:
+      name: punaraksha-data
+      mountPath: /data
+      sizeGB: 1
