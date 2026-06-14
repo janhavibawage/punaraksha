@@ -4,6 +4,8 @@ import { all, run } from "./db.js";
 const tokenSecret = process.env.AUTH_SECRET ?? (process.env.NODE_ENV === "production" ? undefined : "local-dev-punaraksha-secret-change-before-deploy");
 const tokenTtlMs = 1000 * 60 * 60 * 24 * 7;
 const cookieName = "punaraksha_session";
+const cookieSameSite = process.env.COOKIE_SAME_SITE ?? (process.env.NODE_ENV === "production" && process.env.CORS_ORIGIN ? "None" : "Lax");
+const cookieSecure = process.env.NODE_ENV === "production" || cookieSameSite === "None";
 
 if (!tokenSecret) {
   throw new Error("AUTH_SECRET must be set in production");
@@ -159,8 +161,8 @@ export function requireAdmin(req, res, next) {
 export function setAuthCookie(res, token) {
   res.setHeader("Set-Cookie", serializeCookie(cookieName, token, {
     httpOnly: true,
-    sameSite: "Lax",
-    secure: process.env.NODE_ENV === "production",
+    sameSite: cookieSameSite,
+    secure: cookieSecure,
     maxAge: Math.floor(tokenTtlMs / 1000),
     path: "/",
   }));
@@ -169,8 +171,8 @@ export function setAuthCookie(res, token) {
 export function clearAuthCookie(res) {
   res.setHeader("Set-Cookie", serializeCookie(cookieName, "", {
     httpOnly: true,
-    sameSite: "Lax",
-    secure: process.env.NODE_ENV === "production",
+    sameSite: cookieSameSite,
+    secure: cookieSecure,
     maxAge: 0,
     path: "/",
   }));
